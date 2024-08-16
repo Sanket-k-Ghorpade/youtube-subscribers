@@ -3,3 +3,6 @@ node_modules
 
 # Sensitive Environment Variables
 .env
+
+mochawesome-report
+
