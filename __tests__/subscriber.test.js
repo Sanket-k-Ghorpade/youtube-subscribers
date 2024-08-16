@@ -49,7 +49,7 @@ describe("Subscribers API Tests", () => {
 
   describe("GET /subscribers/{id}", () => {
     it("should return a single subscriber by ID", async () => {
-      const subscriberId = "66be0b9a4fa2384d0e1770b3";
+      const subscriberId = "66bef21b31a0291dac6e53de";
       const res = await chai.request(app).get(`/subscribers/${subscriberId}`);
       expect(res).to.have.status(200);
       expect(res.body).to.be.an("object");

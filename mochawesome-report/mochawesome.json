@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2024-08-15T14:19:03.944Z",
-    "end": "2024-08-15T14:19:05.025Z",
-    "duration": 1081,
+    "start": "2024-08-16T08:50:36.085Z",
+    "end": "2024-08-16T08:50:37.306Z",
+    "duration": 1221,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "232d87e0-8c23-4b27-a8ee-e2a7904f6f8a",
+      "uuid": "f88fa34c-9642-4f2a-87e8-bbbcd2d3f69a",
       "title": "",
       "fullFile": "C:\\Users\\91951\\Desktop\\FSWD\\youtube-subscriber\\__tests__\\subscriber.test.js",
       "file": "\\__tests__\\subscriber.test.js",
@@ -27,7 +27,7 @@
           "title": "\"before all\" hook in \"{root}\"",
           "fullTitle": "\"before all\" hook in \"{root}\"",
           "timedOut": false,
-          "duration": 1012,
+          "duration": 1009,
           "state": null,
           "speed": null,
           "pass": false,
@@ -36,8 +36,8 @@
           "context": null,
           "code": "// Wait 1 second for the database to connect successfully\nsetTimeout(done, 1000);",
           "err": {},
-          "uuid": "af7846ea-8d4e-422a-a426-a952ed55912b",
-          "parentUUID": "232d87e0-8c23-4b27-a8ee-e2a7904f6f8a",
+          "uuid": "be587ebf-2aae-4a99-9dc5-7a85deb33e5f",
+          "parentUUID": "f88fa34c-9642-4f2a-87e8-bbbcd2d3f69a",
           "isHook": true,
           "skipped": false
         }
@@ -47,7 +47,7 @@
           "title": "\"after all\" hook in \"{root}\"",
           "fullTitle": "\"after all\" hook in \"{root}\"",
           "timedOut": false,
-          "duration": 4,
+          "duration": 7,
           "state": null,
           "speed": null,
           "pass": false,
@@ -56,8 +56,8 @@
           "context": null,
           "code": "await mongoose.connection.close();",
           "err": {},
-          "uuid": "145b9ae2-1989-4c80-becb-785da26a40fb",
-          "parentUUID": "232d87e0-8c23-4b27-a8ee-e2a7904f6f8a",
+          "uuid": "95e93127-9e3c-4e3c-be21-129684883ec3",
+          "parentUUID": "f88fa34c-9642-4f2a-87e8-bbbcd2d3f69a",
           "isHook": true,
           "skipped": false
         }
@@ -65,7 +65,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "468dbf06-1018-41ca-bee2-fa6cf857cb9b",
+          "uuid": "30e716dc-bed3-4bd8-a616-cf14fa348bef",
           "title": "Subscribers API Tests",
           "fullFile": "C:\\Users\\91951\\Desktop\\FSWD\\youtube-subscriber\\__tests__\\subscriber.test.js",
           "file": "\\__tests__\\subscriber.test.js",
@@ -74,7 +74,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "1c9bf60c-afea-4bed-9061-7f10bd4f7562",
+              "uuid": "61218da2-b8dc-48d9-b5f6-90c9df33ef91",
               "title": "GET /subscribers",
               "fullFile": "C:\\Users\\91951\\Desktop\\FSWD\\youtube-subscriber\\__tests__\\subscriber.test.js",
               "file": "\\__tests__\\subscriber.test.js",
@@ -85,35 +85,35 @@
                   "title": "should return all subscribers",
                   "fullTitle": "Subscribers API Tests GET /subscribers should return all subscribers",
                   "timedOut": false,
-                  "duration": 34,
+                  "duration": 80,
                   "state": "passed",
-                  "speed": "fast",
+                  "speed": "slow",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
                   "code": "const res = await chai.request(app).get(\"/subscribers\");\nexpect(res).to.have.status(200);\nexpect(res.body).to.be.an(\"array\");\nexpect(res.body).to.have.lengthOf.at.least(1);\nexpect(res.body[0]).to.have.property(\"_id\").that.is.a(\"string\");\nexpect(res.body[0]).to.have.property(\"name\").that.is.a(\"string\");\nexpect(res.body[0])\n  .to.have.property(\"subscribedChannel\")\n  .that.is.a(\"string\");\nexpect(res.body[0])\n  .to.have.property(\"subscribedDate\")\n  .that.is.a(\"string\")\n  .and.matches(/\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{3}Z/);",
                   "err": {},
-                  "uuid": "f69ec082-08be-4328-aefd-7baf430685fc",
-                  "parentUUID": "1c9bf60c-afea-4bed-9061-7f10bd4f7562",
+                  "uuid": "69ae0aea-8a48-450f-ba8b-40cf8d7cc9fc",
+                  "parentUUID": "61218da2-b8dc-48d9-b5f6-90c9df33ef91",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "f69ec082-08be-4328-aefd-7baf430685fc"
+                "69ae0aea-8a48-450f-ba8b-40cf8d7cc9fc"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 34,
+              "duration": 80,
               "root": false,
               "rootEmpty": false,
               "_timeout": 60000
             },
             {
-              "uuid": "7da93dab-1f1b-4067-84aa-ebc2067f4300",
+              "uuid": "ad922e5f-037c-4c89-b246-9f11883f865e",
               "title": "GET /subscribers/names",
               "fullFile": "C:\\Users\\91951\\Desktop\\FSWD\\youtube-subscriber\\__tests__\\subscriber.test.js",
               "file": "\\__tests__\\subscriber.test.js",
@@ -124,7 +124,7 @@
                   "title": "should return subscriber names and channels",
                   "fullTitle": "Subscribers API Tests GET /subscribers/names should return subscriber names and channels",
                   "timedOut": false,
-                  "duration": 11,
+                  "duration": 37,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
@@ -133,26 +133,26 @@
                   "context": null,
                   "code": "const res = await chai.request(app).get(\"/subscribers/names\");\nexpect(res).to.have.status(200);\nexpect(res.body).to.be.an(\"array\");\nexpect(res.body).to.have.lengthOf.at.least(1);\nexpect(res.body[0]).to.have.property(\"name\").that.is.a(\"string\");\nexpect(res.body[0])\n  .to.have.property(\"subscribedChannel\")\n  .that.is.a(\"string\");",
                   "err": {},
-                  "uuid": "ac682188-bc02-493b-967f-760571884397",
-                  "parentUUID": "7da93dab-1f1b-4067-84aa-ebc2067f4300",
+                  "uuid": "4bc2cd39-8cdc-475d-aed1-412198cfb160",
+                  "parentUUID": "ad922e5f-037c-4c89-b246-9f11883f865e",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "ac682188-bc02-493b-967f-760571884397"
+                "4bc2cd39-8cdc-475d-aed1-412198cfb160"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 11,
+              "duration": 37,
               "root": false,
               "rootEmpty": false,
               "_timeout": 60000
             },
             {
-              "uuid": "314afa38-b4ec-4618-bdac-33bb72f5bf51",
+              "uuid": "3252d278-6b37-4a71-9513-a01723b1c3ba",
               "title": "GET /subscribers/{id}",
               "fullFile": "C:\\Users\\91951\\Desktop\\FSWD\\youtube-subscriber\\__tests__\\subscriber.test.js",
               "file": "\\__tests__\\subscriber.test.js",
@@ -163,29 +163,29 @@
                   "title": "should return a single subscriber by ID",
                   "fullTitle": "Subscribers API Tests GET /subscribers/{id} should return a single subscriber by ID",
                   "timedOut": false,
-                  "duration": 9,
+                  "duration": 34,
                   "state": "passed",
                   "speed": "fast",
                   "pass": true,
                   "fail": false,
                   "pending": false,
                   "context": null,
-                  "code": "const subscriberId = \"66be0b9a4fa2384d0e1770b3\";\nconst res = await chai.request(app).get(`/subscribers/${subscriberId}`);\nexpect(res).to.have.status(200);\nexpect(res.body).to.be.an(\"object\");\nexpect(res.body).to.have.property(\"_id\", subscriberId);\nexpect(res.body).to.have.property(\"name\").that.is.a(\"string\");\nexpect(res.body)\n  .to.have.property(\"subscribedChannel\")\n  .that.is.a(\"string\");\nexpect(res.body)\n  .to.have.property(\"subscribedDate\")\n  .that.is.a(\"string\")\n  .and.matches(/\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{3}Z/);",
+                  "code": "const subscriberId = \"66bef21b31a0291dac6e53de\";\nconst res = await chai.request(app).get(`/subscribers/${subscriberId}`);\nexpect(res).to.have.status(200);\nexpect(res.body).to.be.an(\"object\");\nexpect(res.body).to.have.property(\"_id\", subscriberId);\nexpect(res.body).to.have.property(\"name\").that.is.a(\"string\");\nexpect(res.body)\n  .to.have.property(\"subscribedChannel\")\n  .that.is.a(\"string\");\nexpect(res.body)\n  .to.have.property(\"subscribedDate\")\n  .that.is.a(\"string\")\n  .and.matches(/\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}.\\d{3}Z/);",
                   "err": {},
-                  "uuid": "3f1640e9-9845-4852-9ba5-b3be1045a3c1",
-                  "parentUUID": "314afa38-b4ec-4618-bdac-33bb72f5bf51",
+                  "uuid": "290815df-1f5c-4002-9f8e-fa51ef7a4527",
+                  "parentUUID": "3252d278-6b37-4a71-9513-a01723b1c3ba",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "3f1640e9-9845-4852-9ba5-b3be1045a3c1"
+                "290815df-1f5c-4002-9f8e-fa51ef7a4527"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 9,
+              "duration": 34,
               "root": false,
               "rootEmpty": false,
               "_timeout": 60000
